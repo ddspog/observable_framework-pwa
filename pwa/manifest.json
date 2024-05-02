@@ -1,14 +1,18 @@
 {
     "name": "observable_framework-pwa",
-    "short_name": "This name will show in your Windows taskbar, in the start menu, and Android homescreen",
+    "short_name": "obsfw-pwa",
+    "description": "Template for an Observable Framework project for PWA apps.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#2D48B3",
     "start_url": "https://ddspog.github.io/observable_framework-pwa",
-    "display": "standalone",
-    "description": "A description for your application",
-    "lang": " The default language of your application",
     "dir": "auto",
-    "theme_color": "#000000",
-    "background_color": "#000000",
-    "orientation": "any",
+    "lang": "en",
+    "orientation": "portrait",
+    "display": "standalone",
+    "display_override": "['window-controls-overlay', 'standalone', 'browser']",
+    "prefer_related_applications": false,
+    "protocol_handlers": [{"protocol":"mailto","url":"/newEmail?to=%s"}],
+    "categories": ["information", "medical", "math"],
     "icons": [
         {
             "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
@@ -28,21 +32,16 @@
             "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
             "sizes": "2880x1800",
             "type": "image/png",
-            "description": "A screenshot of the home page"
+            "description": "A screenshot of the home page",
+            "platform": "wide"
         }
     ],
-    "related_applications": [
-        {
-            "platform":"windows",
-            "url": " The URL to your app in that app store"
-        }
-    ],
-    "prefer_related_applications": false,
-    "shortcuts": [
-        {
-            "name":"The name you would like to be displayed for your shortcut",
-            "url":"The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut",
-            "description":"A description of the functionality of this shortcut"
-        }
-    ]
+    "share_target": {
+        "action": "/",
+        "method": "GET",
+        "params": {}
+    },
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    }
 }
